@@ -1,0 +1,91 @@
+{
+  "type": "record",
+  "name": "VehicleUtilizationDay",
+  "namespace": "com.withterminal.api",
+  "doc": "Daily vehicle usage metrics for a specific vehicle and date.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the vehicle utilization record."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "vehicle",
+      "type": "string",
+      "doc": "The vehicle this utilization data is for."
+    },
+    {
+      "name": "date",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      },
+      "doc": "The date this utilization data represents."
+    },
+    {
+      "name": "fuelConsumed",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Fuel consumed during this date in liters."
+    },
+    {
+      "name": "distance",
+      "type": "double",
+      "doc": "Distance traveled during this date in kilometers."
+    },
+    {
+      "name": "durations",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "VehicleUtilizationDurations",
+          "doc": "Duration metrics for vehicle utilization.",
+          "fields": [
+            {
+              "name": "driving",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Time spent driving during this date in milliseconds."
+            },
+            {
+              "name": "idling",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Time spent idling during this date in milliseconds."
+            }
+          ]
+        }
+      ],
+      "default": null,
+      "doc": "Duration metrics for the day."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.CoreEntityMetadata",
+      "doc": "Internal metadata about the record."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

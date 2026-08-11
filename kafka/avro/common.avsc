@@ -1,0 +1,142 @@
+[
+  {
+    "type": "record",
+    "name": "Coordinates",
+    "namespace": "com.withterminal.api",
+    "doc": "Geographic coordinates.",
+    "fields": [
+      {
+        "name": "longitude",
+        "type": "double"
+      },
+      {
+        "name": "latitude",
+        "type": "double"
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "Address",
+    "namespace": "com.withterminal.api",
+    "doc": "Reverse geocoded address details.",
+    "fields": [
+      {
+        "name": "formatted",
+        "type": ["null", "string"],
+        "default": null
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "CoreEntityMetadata",
+    "namespace": "com.withterminal.api",
+    "doc": "Internal metadata about the record.",
+    "fields": [
+      {
+        "name": "addedAt",
+        "type": {
+          "type": "long",
+          "logicalType": "timestamp-micros"
+        }
+      },
+      {
+        "name": "modifiedAt",
+        "type": {
+          "type": "long",
+          "logicalType": "timestamp-micros"
+        }
+      },
+      {
+        "name": "deletedAt",
+        "type": [
+          "null",
+          {
+            "type": "long",
+            "logicalType": "timestamp-micros"
+          }
+        ],
+        "default": null
+      },
+      {
+        "name": "visibility",
+        "type": ["null", "string"],
+        "default": null
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "TimeSeriesMetadata",
+    "namespace": "com.withterminal.api",
+    "doc": "Internal metadata about the time series.",
+    "fields": [
+      {
+        "name": "modifiedAt",
+        "type": [
+          "null",
+          {
+            "type": "long",
+            "logicalType": "timestamp-micros"
+          }
+        ],
+        "default": null,
+        "doc": "Timestamp when the record was last modified."
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "RawData",
+    "namespace": "com.withterminal.api",
+    "doc": "Raw data from the source provider.",
+    "fields": [
+      {
+        "name": "provider",
+        "type": "string"
+      },
+      {
+        "name": "data",
+        "type": "string",
+        "doc": "JSON-encoded raw data from the provider."
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "LicensePlate",
+    "namespace": "com.withterminal.api",
+    "doc": "License plate information.",
+    "fields": [
+      {
+        "name": "state",
+        "type": ["null", "string"],
+        "default": null
+      },
+      {
+        "name": "number",
+        "type": ["null", "string"],
+        "default": null
+      }
+    ]
+  },
+  {
+    "type": "record",
+    "name": "DriverLicense",
+    "namespace": "com.withterminal.api",
+    "doc": "Driver's license information.",
+    "fields": [
+      {
+        "name": "state",
+        "type": ["null", "string"],
+        "default": null
+      },
+      {
+        "name": "number",
+        "type": ["null", "string"],
+        "default": null
+      }
+    ]
+  }
+]

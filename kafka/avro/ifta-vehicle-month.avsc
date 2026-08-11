@@ -1,0 +1,61 @@
+{
+  "type": "record",
+  "name": "IFTAVehicleMonth",
+  "namespace": "com.withterminal.api",
+  "doc": "Mileage driven by a vehicle, month and jurisdiction.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the IFTA vehicle month record in Terminal."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "vehicle",
+      "type": "string",
+      "doc": "Reference to the vehicle for this IFTA record."
+    },
+    {
+      "name": "month",
+      "type": "string",
+      "doc": "Month in format YYYY-MM."
+    },
+    {
+      "name": "jurisdiction",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "IFTA jurisdiction code (state/province). Can be null."
+    },
+    {
+      "name": "distance",
+      "type": "double",
+      "doc": "Total distance traveled in kilometers."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.CoreEntityMetadata",
+      "doc": "Internal metadata about the record."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "type": "record",
+  "name": "VehicleStatLog",
+  "namespace": "com.withterminal.api",
+  "doc": "A point-in-time record of stats and logs for a specific vehicle.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the vehicle stat log."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "sourceId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The ID of the record in the source system."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "doc": "Type of vehicle stat: engine_state, odometer, total_fuel_consumption, fuel_level, engine_runtime, engine_oil_percentage, engine_oil_pressure, engine_oil_temperature, engine_coolant_temperature, coolant_percentage, engine_rpm, battery_voltage."
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      },
+      "doc": "Timestamp when this stat was recorded."
+    },
+    {
+      "name": "vehicle",
+      "type": "string",
+      "doc": "Reference to the vehicle the event is about."
+    },
+    {
+      "name": "state",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Engine state: on, off, idle (when type=engine_state)."
+    },
+    {
+      "name": "odometer",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Odometer reading in kilometers (when type=odometer)."
+    },
+    {
+      "name": "fuelConsumed",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Total fuel consumed in liters (when type=total_fuel_consumption)."
+    },
+    {
+      "name": "fuelPercentage",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Fuel level as percentage (when type=fuel_level)."
+    },
+    {
+      "name": "duration",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Engine runtime duration in milliseconds (when type=engine_runtime)."
+    },
+    {
+      "name": "percentage",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Percentage value (when type=engine_oil_percentage or coolant_percentage)."
+    },
+    {
+      "name": "pressure",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Pressure in PSI (when type=engine_oil_pressure)."
+    },
+    {
+      "name": "temperature",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Temperature in Celsius (when type=engine_oil_temperature or engine_coolant_temperature)."
+    },
+    {
+      "name": "rpm",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Engine RPM (when type=engine_rpm)."
+    },
+    {
+      "name": "voltage",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Battery voltage in volts (when type=battery_voltage)."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.TimeSeriesMetadata",
+      "doc": "Internal metadata about the time series."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

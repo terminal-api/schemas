@@ -1,0 +1,95 @@
+{
+  "type": "record",
+  "name": "Trip",
+  "namespace": "com.withterminal.api",
+  "doc": "Trips define a period of time where a vehicle is in motion. Trips are based on the provider's definition.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the trip in Terminal."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "sourceId",
+      "type": "string",
+      "doc": "The ID of the record in the source system."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "driver",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The ID of the driver that was driving during the trip."
+    },
+    {
+      "name": "vehicle",
+      "type": "string",
+      "doc": "The ID of the vehicle that was involved in the trip."
+    },
+    {
+      "name": "startedAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      },
+      "doc": "Timestamp when the trip started."
+    },
+    {
+      "name": "endedAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      },
+      "doc": "Timestamp when the trip ended."
+    },
+    {
+      "name": "startLocation",
+      "type": ["null", "com.withterminal.api.Coordinates"],
+      "default": null,
+      "doc": "Starting location of the trip."
+    },
+    {
+      "name": "endLocation",
+      "type": ["null", "com.withterminal.api.Coordinates"],
+      "default": null,
+      "doc": "Ending location of the trip."
+    },
+    {
+      "name": "distance",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Distance traveled in kilometers."
+    },
+    {
+      "name": "duration",
+      "type": "double",
+      "doc": "Trip duration in milliseconds."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.CoreEntityMetadata",
+      "doc": "Internal metadata about the record."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

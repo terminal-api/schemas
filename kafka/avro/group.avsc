@@ -1,0 +1,87 @@
+{
+  "type": "record",
+  "name": "Group",
+  "namespace": "com.withterminal.api",
+  "doc": "A group represents a collection of assets (vehicles, trailers, drivers) defined by the provider.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the group in Terminal."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "sourceId",
+      "type": "string",
+      "doc": "The ID of the record in the source system."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "name",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Name of the group."
+    },
+    {
+      "name": "description",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Description of the group."
+    },
+    {
+      "name": "parent",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Optional parent group."
+    },
+    {
+      "name": "createdAt",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-micros"
+        }
+      ],
+      "default": null,
+      "doc": "Timestamp when the record was created in the source system."
+    },
+    {
+      "name": "updatedAt",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-micros"
+        }
+      ],
+      "default": null,
+      "doc": "Timestamp when the record was last updated in the source system."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.CoreEntityMetadata",
+      "doc": "Internal metadata about the record."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

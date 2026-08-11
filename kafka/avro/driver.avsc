@@ -1,0 +1,128 @@
+{
+  "type": "record",
+  "name": "Driver",
+  "namespace": "com.withterminal.api",
+  "doc": "The model representing a driver in Terminal.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the driver in Terminal."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "sourceId",
+      "type": "string",
+      "doc": "The ID of the record in the source system."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "doc": "The status in the providers system: active, inactive."
+    },
+    {
+      "name": "firstName",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Driver's first name."
+    },
+    {
+      "name": "middleName",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Driver's middle name."
+    },
+    {
+      "name": "lastName",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Driver's last name."
+    },
+    {
+      "name": "email",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Driver's email address."
+    },
+    {
+      "name": "phone",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Phone number formatted in E.164 formatting."
+    },
+    {
+      "name": "username",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The driver's username for login purposes."
+    },
+    {
+      "name": "license",
+      "type": ["null", "com.withterminal.api.DriverLicense"],
+      "default": null,
+      "doc": "Driver's license information."
+    },
+    {
+      "name": "groups",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ],
+      "default": null,
+      "doc": "List of group IDs the driver belongs to."
+    },
+    {
+      "name": "createdAt",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-micros"
+        }
+      ],
+      "default": null,
+      "doc": "Timestamp when the record was created in the source system."
+    },
+    {
+      "name": "updatedAt",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-micros"
+        }
+      ],
+      "default": null,
+      "doc": "Timestamp when the record was last updated in the source system."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.CoreEntityMetadata",
+      "doc": "Internal metadata about the record."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

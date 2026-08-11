@@ -1,0 +1,156 @@
+{
+  "type": "record",
+  "name": "FaultCodeEvent",
+  "namespace": "com.withterminal.api",
+  "doc": "A fault code observed at a specific time.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the fault code event in Terminal."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "vehicle",
+      "type": "string",
+      "doc": "Vehicle associated with the fault."
+    },
+    {
+      "name": "protocol",
+      "type": "string",
+      "doc": "Fault code protocol: obdii, j1939."
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "doc": "The status of the fault code at the time of the event. Some providers do not report closed statuses."
+    },
+    {
+      "name": "code",
+      "type": "string",
+      "doc": "The fault code identifier. For OBD-II systems: alphanumeric DTC codes (P0087, U0046, C0123, B1234). For J1939 systems: SPN-FMI format (SPN3031-FMI9) or derived codes from SPN/FMI combinations."
+    },
+    {
+      "name": "description",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Human-readable description of the fault."
+    },
+    {
+      "name": "observedAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      },
+      "doc": "Timestamp when the fault code was observed."
+    },
+    {
+      "name": "milStatus",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The Malfunction Indicator Lamp (MIL) status of the vehicle at the time the fault code was observed."
+    },
+    {
+      "name": "obdii",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "OBDIIFaultCode",
+          "doc": "OBD-II Diagnostic Trouble Code information for light/medium duty vehicles. Contains standardized alphanumeric codes like P0087, U0046, C0123, B1234.",
+          "fields": [
+            {
+              "name": "code",
+              "type": "string",
+              "doc": "Alphanumeric DTC code (e.g., P0087, U0046)."
+            },
+            {
+              "name": "description",
+              "type": ["null", "string"],
+              "default": null,
+              "doc": "Human-readable description of the DTC."
+            }
+          ]
+        }
+      ],
+      "default": null,
+      "doc": "OBD-II specific fault code information."
+    },
+    {
+      "name": "j1939",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "J1939FaultCode",
+          "doc": "J1939 fault code information for heavy-duty vehicles. FMI (Failure Mode Identifier) indicates the specific nature of the fault (0-31 numeric codes).",
+          "fields": [
+            {
+              "name": "fmi",
+              "type": ["null", "int"],
+              "default": null,
+              "doc": "Failure Mode Identifier (FMI) - numeric code (0-31) indicating the specific nature of the fault."
+            },
+            {
+              "name": "fmiDescription",
+              "type": ["null", "string"],
+              "default": null,
+              "doc": "Human-readable description of the FMI failure mode."
+            },
+            {
+              "name": "spn",
+              "type": "int",
+              "doc": "Suspect Parameter Number (SPN) - identifies the specific parameter/system affected."
+            },
+            {
+              "name": "spnDescription",
+              "type": ["null", "string"],
+              "default": null,
+              "doc": "Human-readable description of the SPN parameter/system."
+            },
+            {
+              "name": "occurrenceCount",
+              "type": ["null", "int"],
+              "default": null,
+              "doc": "The occurrence count reported by the provider."
+            },
+            {
+              "name": "sourceAddress",
+              "type": ["null", "int"],
+              "default": null,
+              "doc": "The source address of the fault code."
+            }
+          ]
+        }
+      ],
+      "default": null,
+      "doc": "J1939 specific fault code information."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.CoreEntityMetadata",
+      "doc": "Internal metadata about the record."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

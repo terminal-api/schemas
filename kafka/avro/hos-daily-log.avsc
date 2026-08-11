@@ -1,0 +1,153 @@
+{
+  "type": "record",
+  "name": "HOSDailyLog",
+  "namespace": "com.withterminal.api",
+  "doc": "Record of daily hours of service.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the HOS daily log in Terminal."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "sourceId",
+      "type": "string",
+      "doc": "The ID of the record in the source system."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "driver",
+      "type": "string",
+      "doc": "Reference to the driver for this log."
+    },
+    {
+      "name": "date",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      },
+      "doc": "The date for this daily log."
+    },
+    {
+      "name": "distances",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "HOSDailyDistances",
+          "doc": "Breakdown of different distance measurements for the day when available in the source system.",
+          "fields": [
+            {
+              "name": "total",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Total distance driven during this day in kilometers."
+            },
+            {
+              "name": "driving",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Distance driven during driving."
+            },
+            {
+              "name": "personalConveyance",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Distance driven during personal conveyance."
+            },
+            {
+              "name": "yardMove",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Distance driven during yard moves."
+            }
+          ]
+        }
+      ],
+      "default": null,
+      "doc": "Breakdown of different distance measurements for the day when available in the source system."
+    },
+    {
+      "name": "statusDurations",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "HOSStatusDurations",
+          "fields": [
+            {
+              "name": "onDuty",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Time spent on duty in milliseconds."
+            },
+            {
+              "name": "offDuty",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Time spent off duty in milliseconds."
+            },
+            {
+              "name": "driving",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Time spent driving in milliseconds."
+            },
+            {
+              "name": "waiting",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Time spent waiting in milliseconds."
+            },
+            {
+              "name": "sleeperBed",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Time spent in sleeper bed in milliseconds."
+            },
+            {
+              "name": "personalConveyance",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Time spent in personal conveyance in milliseconds."
+            },
+            {
+              "name": "yardMove",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Time spent in yard move in milliseconds."
+            }
+          ]
+        }
+      ],
+      "default": null,
+      "doc": "Duration breakdown by status when available in the source system."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.CoreEntityMetadata",
+      "doc": "Internal metadata about the record."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

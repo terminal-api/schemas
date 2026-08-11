@@ -1,0 +1,113 @@
+{
+  "type": "record",
+  "name": "MessageWrapper",
+  "namespace": "com.withterminal.api",
+  "doc": "Event wrapper for Kafka deliveries - mirrors the webhook event structure. Only one field in detail will be populated per message.",
+  "fields": [
+    {
+      "name": "eventType",
+      "type": "string",
+      "doc": "Event type (insert or modify)."
+    },
+    {
+      "name": "model",
+      "type": "string",
+      "doc": "Schema name."
+    },
+    {
+      "name": "detail",
+      "type": {
+        "type": "record",
+        "name": "MessageDetail",
+        "doc": "Event detail containing the model data - only one field will be populated per message.",
+        "fields": [
+          {
+            "name": "Vehicle",
+            "type": ["null", "com.withterminal.api.Vehicle"],
+            "default": null,
+            "doc": "Vehicle entity data."
+          },
+          {
+            "name": "Driver",
+            "type": ["null", "com.withterminal.api.Driver"],
+            "default": null,
+            "doc": "Driver entity data."
+          },
+          {
+            "name": "Group",
+            "type": ["null", "com.withterminal.api.Group"],
+            "default": null,
+            "doc": "Group entity data."
+          },
+          {
+            "name": "Device",
+            "type": ["null", "com.withterminal.api.Device"],
+            "default": null,
+            "doc": "Device entity data."
+          },
+          {
+            "name": "Trailer",
+            "type": ["null", "com.withterminal.api.Trailer"],
+            "default": null,
+            "doc": "Trailer entity data."
+          },
+          {
+            "name": "VehicleLocation",
+            "type": ["null", "com.withterminal.api.VehicleLocation"],
+            "default": null,
+            "doc": "Vehicle location data."
+          },
+          {
+            "name": "VehicleStatLog",
+            "type": ["null", "com.withterminal.api.VehicleStatLog"],
+            "default": null,
+            "doc": "Vehicle stat log data."
+          },
+          {
+            "name": "Trip",
+            "type": ["null", "com.withterminal.api.Trip"],
+            "default": null,
+            "doc": "Trip data."
+          },
+          {
+            "name": "SafetyEvent",
+            "type": ["null", "com.withterminal.api.SafetyEvent"],
+            "default": null,
+            "doc": "Safety event data."
+          },
+          {
+            "name": "FaultCodeEvent",
+            "type": ["null", "com.withterminal.api.FaultCodeEvent"],
+            "default": null,
+            "doc": "Fault code event data."
+          },
+          {
+            "name": "HOSLog",
+            "type": ["null", "com.withterminal.api.HOSLog"],
+            "default": null,
+            "doc": "HOS log data."
+          },
+          {
+            "name": "HOSDailyLog",
+            "type": ["null", "com.withterminal.api.HOSDailyLog"],
+            "default": null,
+            "doc": "HOS daily log data."
+          },
+          {
+            "name": "IFTAVehicleMonth",
+            "type": ["null", "com.withterminal.api.IFTAVehicleMonth"],
+            "default": null,
+            "doc": "IFTA vehicle month data."
+          },
+          {
+            "name": "VehicleUtilizationDay",
+            "type": ["null", "com.withterminal.api.VehicleUtilizationDay"],
+            "default": null,
+            "doc": "Daily vehicle utilization data."
+          }
+        ]
+      },
+      "doc": "Event detail containing the model data."
+    }
+  ]
+}

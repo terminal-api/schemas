@@ -1,0 +1,88 @@
+{
+  "type": "record",
+  "name": "VehicleLocation",
+  "namespace": "com.withterminal.api",
+  "doc": "A point-in-time record of a vehicle's location.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the vehicle location in Terminal."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "sourceId",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The ID of the record in the source system."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "vehicle",
+      "type": "string",
+      "doc": "The ID of the vehicle that the location is tracking."
+    },
+    {
+      "name": "driver",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The driver that was driving the vehicle at the time."
+    },
+    {
+      "name": "locatedAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      },
+      "doc": "Timestamp when the vehicle was at this location."
+    },
+    {
+      "name": "location",
+      "type": "com.withterminal.api.Coordinates",
+      "doc": "Geographic coordinates of the vehicle."
+    },
+    {
+      "name": "address",
+      "type": ["null", "com.withterminal.api.Address"],
+      "default": null,
+      "doc": "Reverse geocoded address details for locations when available at the source."
+    },
+    {
+      "name": "heading",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Heading in degrees (0-360)."
+    },
+    {
+      "name": "speed",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Speed in kilometers per hour."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.TimeSeriesMetadata",
+      "doc": "Internal metadata about the time series."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

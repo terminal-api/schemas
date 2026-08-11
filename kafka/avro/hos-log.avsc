@@ -1,0 +1,135 @@
+{
+  "type": "record",
+  "name": "HOSLog",
+  "namespace": "com.withterminal.api",
+  "doc": "Records a change in duty status by a driver.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the HOS log in Terminal."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "sourceId",
+      "type": "string",
+      "doc": "The ID of the record in the source system."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "doc": "HOS status: off_duty, sleeper_bed, driving, on_duty, yard_move, personal_conveyance, waiting_time."
+    },
+    {
+      "name": "driver",
+      "type": "string",
+      "doc": "Reference to the driver for this log."
+    },
+    {
+      "name": "vehicle",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The vehicle the driver was driving when the log was recorded."
+    },
+    {
+      "name": "codrivers",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ],
+      "default": null,
+      "doc": "Additional drivers that were included in the HOS log."
+    },
+    {
+      "name": "startedAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      },
+      "doc": "Timestamp when the status started."
+    },
+    {
+      "name": "endedAt",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-micros"
+        }
+      ],
+      "default": null,
+      "doc": "Timestamp when the status ended."
+    },
+    {
+      "name": "location",
+      "type": ["null", "com.withterminal.api.Coordinates"],
+      "default": null,
+      "doc": "Where the log was recorded."
+    },
+    {
+      "name": "remarks",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "record",
+          "name": "HOSRemark",
+          "fields": [
+            {
+              "name": "sourceId",
+              "type": ["null", "string"],
+              "default": null,
+              "doc": "The ID of the remark in the source system."
+            },
+            {
+              "name": "submittedAt",
+              "type": [
+                "null",
+                {
+                  "type": "long",
+                  "logicalType": "timestamp-micros"
+                }
+              ],
+              "default": null,
+              "doc": "Timestamp when the remark was submitted."
+            },
+            {
+              "name": "notes",
+              "type": "string",
+              "doc": "Additional comments."
+            }
+          ]
+        }
+      },
+      "doc": "Remarks associated with the log."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.CoreEntityMetadata",
+      "doc": "Internal metadata about the record."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}

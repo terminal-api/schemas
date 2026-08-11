@@ -1,0 +1,194 @@
+{
+  "type": "record",
+  "name": "SafetyEvent",
+  "namespace": "com.withterminal.api",
+  "doc": "A normalized record of a safety-related incident that occurred during a vehicle's operation. These events are detected and recorded by the telematics provider's system.",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Unique identifier for the safety event in Terminal."
+    },
+    {
+      "name": "connectionId",
+      "type": "string",
+      "doc": "Connection ID that produced this data."
+    },
+    {
+      "name": "sourceId",
+      "type": "string",
+      "doc": "The ID of the record in the source system."
+    },
+    {
+      "name": "provider",
+      "type": "string",
+      "doc": "Provider code identifying the telematics provider."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "doc": "Safety event type: harsh_brake, harsh_acceleration, harsh_turn, speeding, crash, near_crash, tailgating, cell_phone, distracted, drowsiness, smoking, seat_belt_violation, stop_sign_violation, red_light_violation, unsafe_lane_change, camera_obstruction, eating_and_drinking, rolling_stop, unsafe_parking."
+    },
+    {
+      "name": "sourceType",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The original event type as defined by the telematics provider's system."
+    },
+    {
+      "name": "driver",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "The ID of the driver that was driving during the event."
+    },
+    {
+      "name": "vehicle",
+      "type": "string",
+      "doc": "The ID of the vehicle that was involved in the event."
+    },
+    {
+      "name": "startedAt",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-micros"
+      },
+      "doc": "Timestamp when the event started."
+    },
+    {
+      "name": "startLocation",
+      "type": ["null", "com.withterminal.api.Coordinates"],
+      "default": null,
+      "doc": "Starting location of the event."
+    },
+    {
+      "name": "endedAt",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-micros"
+        }
+      ],
+      "default": null,
+      "doc": "Timestamp when the event ended."
+    },
+    {
+      "name": "endLocation",
+      "type": ["null", "com.withterminal.api.Coordinates"],
+      "default": null,
+      "doc": "Ending location of the event."
+    },
+    {
+      "name": "stats",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "SafetyEventStats",
+          "fields": [
+            {
+              "name": "maximumSpeed",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Maximum speed of the vehicle in KPH."
+            },
+            {
+              "name": "averageSpeed",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Average speed of the vehicle in KPH."
+            },
+            {
+              "name": "roadSpeedLimit",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Speed Limit of the road in KPH."
+            },
+            {
+              "name": "gForceForwardBackward",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "The acceleration/breaking force as a factor of gravity (g)."
+            },
+            {
+              "name": "gForceSideToSide",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "The cornering (lateral) acceleration as a factor of gravity (g)."
+            },
+            {
+              "name": "heading",
+              "type": ["null", "double"],
+              "default": null,
+              "doc": "Heading of the vehicle (in degrees)."
+            }
+          ]
+        }
+      ],
+      "default": null,
+      "doc": "Statistics about the safety event."
+    },
+    {
+      "name": "cameraMedia",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "CameraMediaReference",
+          "fields": [
+            {
+              "name": "frontFacing",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "CameraMediaFileReference",
+                  "fields": [
+                    {
+                      "name": "available",
+                      "type": "boolean",
+                      "doc": "Indicates whether the camera media file is available for retrieval."
+                    },
+                    {
+                      "name": "sourceId",
+                      "type": ["null", "string"],
+                      "default": null,
+                      "doc": "The identifier for the camera media file in the source system."
+                    }
+                  ]
+                }
+              ],
+              "default": null,
+              "doc": "The front facing camera media."
+            },
+            {
+              "name": "rearFacing",
+              "type": ["null", "CameraMediaFileReference"],
+              "default": null,
+              "doc": "The rear facing camera media."
+            }
+          ]
+        }
+      ],
+      "default": null,
+      "doc": "Camera media reference for the event."
+    },
+    {
+      "name": "metadata",
+      "type": "com.withterminal.api.CoreEntityMetadata",
+      "doc": "Internal metadata about the record."
+    },
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "com.withterminal.api.RawData"
+        }
+      ],
+      "default": null,
+      "doc": "Raw data from the source provider."
+    }
+  ]
+}
