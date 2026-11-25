@@ -1,0 +1,49 @@
+{
+  "topic": "terminal.device",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:dvc_01JK8RP0PV6KQQPHWNK395E7MX",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "Device",
+    "terminal-provider": "geotab"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "Device",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": null,
+      "Device": {
+        "id": "dvc_01JK8RP0PV6KQQPHWNK395E7MX",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b3E93",
+        "provider": "geotab",
+        "type": "tracker",
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "description": "GO9 Telematics Device",
+        "serialNumber": "G9-4A2B-8C91",
+        "lastConnectedAt": 1795616990000000,
+        "createdAt": 1736935200000000,
+        "updatedAt": 1795616990000000,
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": "visible"
+        },
+        "raw": null
+      },
+      "Trailer": null,
+      "VehicleLocation": null,
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": null
+    }
+  }
+}

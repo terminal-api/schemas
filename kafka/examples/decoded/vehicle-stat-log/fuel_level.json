@@ -1,0 +1,53 @@
+{
+  "topic": "terminal.vehicle-stat-log",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "VehicleStatLog",
+    "terminal-provider": "geotab",
+    "terminal-event-time": "2026-11-25T14:30:09Z"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "VehicleStatLog",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": null,
+      "Device": null,
+      "Trailer": null,
+      "VehicleLocation": null,
+      "VehicleStatLog": {
+        "id": "vcl_st_01KAW9Y2P3Q4R5S6T7V8W9X0JA",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b100010",
+        "provider": "geotab",
+        "type": "fuel_level",
+        "timestamp": 1795617009000000,
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "state": null,
+        "odometer": null,
+        "fuelConsumed": null,
+        "fuelPercentage": 67.5,
+        "duration": null,
+        "percentage": null,
+        "pressure": null,
+        "temperature": null,
+        "rpm": null,
+        "voltage": null,
+        "metadata": {
+          "modifiedAt": 1795617010000000
+        },
+        "raw": null
+      },
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": null
+    }
+  }
+}

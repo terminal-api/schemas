@@ -1,0 +1,45 @@
+{
+  "topic": "terminal.ifta-vehicle-month",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "IFTAVehicleMonth",
+    "terminal-provider": "geotab"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "IFTAVehicleMonth",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": null,
+      "Device": null,
+      "Trailer": null,
+      "VehicleLocation": null,
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": {
+        "id": "ifta_rpt_01KAW9Y2P3Q4R5S6T7V8W9X0G1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "provider": "geotab",
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "month": "2026-11",
+        "jurisdiction": "OH",
+        "distance": 4812.6,
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": "visible"
+        },
+        "raw": null
+      },
+      "VehicleUtilizationDay": null
+    }
+  }
+}

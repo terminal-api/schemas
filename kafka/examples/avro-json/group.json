@@ -1,0 +1,49 @@
+{
+  "eventType": "INSERT",
+  "model": "Group",
+  "detail": {
+    "Vehicle": null,
+    "Driver": null,
+    "Group": {
+      "com.withterminal.api.Group": {
+        "id": "group_01JK8RP0PV6KQQPHWNK395E7MY",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b4F04",
+        "provider": "geotab",
+        "name": {
+          "string": "Midwest Regional Fleet"
+        },
+        "description": {
+          "string": "Heavy-duty linehaul tractors"
+        },
+        "parent": null,
+        "createdAt": {
+          "long": 1717228800000000
+        },
+        "updatedAt": {
+          "long": 1793534400000000
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": {
+            "string": "visible"
+          }
+        },
+        "raw": null
+      }
+    },
+    "Device": null,
+    "Trailer": null,
+    "VehicleLocation": null,
+    "VehicleStatLog": null,
+    "Trip": null,
+    "SafetyEvent": null,
+    "FaultCodeEvent": null,
+    "HOSLog": null,
+    "HOSDailyLog": null,
+    "IFTAVehicleMonth": null,
+    "VehicleUtilizationDay": null
+  }
+}

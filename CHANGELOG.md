@@ -9,8 +9,13 @@ and this project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
 ### Added
 
+- Canonical Kafka example payloads under `kafka/examples/` (`avro-json/` and `decoded/`) for all 14 models, including all 12 `VehicleStatLog` stat types and an `includeRaw: true` example.
+
+## [0.1.0-beta.1] - 2026-08-11
+
+### Added
+
 - Initial public Kafka Avro schemas mirrored from Terminal's connector wire format.
 - Shared types in `kafka/avro/common.avsc`.
 - `MessageWrapper` envelope in `kafka/avro/message.avsc`.
 - Model schemas: Vehicle, Driver, Device, Group, Trailer, Trip, SafetyEvent, FaultCodeEvent, HOSLog, HOSDailyLog, IFTAVehicleMonth, VehicleLocation, VehicleStatLog, VehicleUtilizationDay.
-- Example JSON payloads for Vehicle, Driver, Trip, and VehicleLocation.

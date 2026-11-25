@@ -1,0 +1,95 @@
+{
+  "eventType": "INSERT",
+  "model": "SafetyEvent",
+  "detail": {
+    "Vehicle": null,
+    "Driver": null,
+    "Group": null,
+    "Device": null,
+    "Trailer": null,
+    "VehicleLocation": null,
+    "VehicleStatLog": null,
+    "Trip": null,
+    "SafetyEvent": {
+      "com.withterminal.api.SafetyEvent": {
+        "id": "sft_evt_01KAW9Y2P3Q4R5S6T7V8W9X0C1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "evt-90812",
+        "provider": "samsara",
+        "type": "harsh_brake",
+        "sourceType": {
+          "string": "harshBrake"
+        },
+        "driver": {
+          "string": "drv_01JK8RP0PV6KQQPHWNK395E7MW"
+        },
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "startedAt": 1795614312000000,
+        "startLocation": {
+          "com.withterminal.api.Coordinates": {
+            "longitude": -83.1204,
+            "latitude": 39.9551
+          }
+        },
+        "endedAt": {
+          "long": 1795614316000000
+        },
+        "endLocation": {
+          "com.withterminal.api.Coordinates": {
+            "longitude": -83.1189,
+            "latitude": 39.9552
+          }
+        },
+        "stats": {
+          "com.withterminal.api.SafetyEventStats": {
+            "maximumSpeed": {
+              "double": 98.2
+            },
+            "averageSpeed": {
+              "double": 71.4
+            },
+            "roadSpeedLimit": {
+              "double": 104.6
+            },
+            "gForceForwardBackward": {
+              "double": -0.48
+            },
+            "gForceSideToSide": {
+              "double": 0.04
+            },
+            "heading": {
+              "double": 90
+            }
+          }
+        },
+        "cameraMedia": {
+          "com.withterminal.api.CameraMediaReference": {
+            "frontFacing": {
+              "com.withterminal.api.CameraMediaFileReference": {
+                "available": true,
+                "sourceId": {
+                  "string": "cam-front-90812"
+                }
+              }
+            },
+            "rearFacing": null
+          }
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": {
+            "string": "visible"
+          }
+        },
+        "raw": null
+      }
+    },
+    "FaultCodeEvent": null,
+    "HOSLog": null,
+    "HOSDailyLog": null,
+    "IFTAVehicleMonth": null,
+    "VehicleUtilizationDay": null
+  }
+}
