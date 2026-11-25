@@ -1,0 +1,50 @@
+{
+  "topic": "terminal.vehicle-utilization",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "VehicleUtilizationDay",
+    "terminal-provider": "geotab",
+    "terminal-event-time": "2026-11-25T00:00:00Z"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "VehicleUtilizationDay",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": null,
+      "Device": null,
+      "Trailer": null,
+      "VehicleLocation": null,
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": {
+        "id": "vcl_day_01KAW9Y2P3Q4R5S6T7V8W9X0H1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "provider": "geotab",
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "date": 20782,
+        "fuelConsumed": 184.5,
+        "distance": 540.2,
+        "durations": {
+          "driving": 28800000,
+          "idling": 2700000
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": "visible"
+        },
+        "raw": null
+      }
+    }
+  }
+}

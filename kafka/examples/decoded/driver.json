@@ -1,0 +1,58 @@
+{
+  "topic": "terminal.driver",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:drv_01JK8RP0PV6KQQPHWNK395E7MW",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "Driver",
+    "terminal-provider": "geotab"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "Driver",
+    "detail": {
+      "Vehicle": null,
+      "Driver": {
+        "id": "drv_01JK8RP0PV6KQQPHWNK395E7MW",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b2D82",
+        "provider": "geotab",
+        "status": "active",
+        "firstName": "Jordan",
+        "middleName": null,
+        "lastName": "Rivera",
+        "email": "j.rivera@example.com",
+        "phone": "+15550100123",
+        "username": "jrivera",
+        "license": {
+          "state": "OH",
+          "number": "CDL8841209"
+        },
+        "groups": [
+          "group_01JK8RP0PV6KQQPHWNK395E7MY"
+        ],
+        "createdAt": 1738400400000000,
+        "updatedAt": 1795615200000000,
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": "visible"
+        },
+        "raw": null
+      },
+      "Group": null,
+      "Device": null,
+      "Trailer": null,
+      "VehicleLocation": null,
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": null
+    }
+  }
+}

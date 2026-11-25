@@ -1,0 +1,67 @@
+{
+  "eventType": "INSERT",
+  "model": "FaultCodeEvent",
+  "detail": {
+    "Vehicle": null,
+    "Driver": null,
+    "Group": null,
+    "Device": null,
+    "Trailer": null,
+    "VehicleLocation": null,
+    "VehicleStatLog": null,
+    "Trip": null,
+    "SafetyEvent": null,
+    "FaultCodeEvent": {
+      "com.withterminal.api.FaultCodeEvent": {
+        "id": "fc_evt_01KAW9Y2P3Q4R5S6T7V8W9X0D1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "provider": "geotab",
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "protocol": "j1939",
+        "status": "open",
+        "code": "SPN100-FMI1",
+        "description": {
+          "string": "Engine Oil Pressure - Data Valid But Below Normal Operational Range"
+        },
+        "observedAt": 1795615800000000,
+        "milStatus": {
+          "string": "on"
+        },
+        "obdii": null,
+        "j1939": {
+          "com.withterminal.api.J1939FaultCode": {
+            "fmi": {
+              "int": 1
+            },
+            "fmiDescription": {
+              "string": "Data Valid But Below Normal Operational Range - Most Severe Level"
+            },
+            "spn": 100,
+            "spnDescription": {
+              "string": "Engine Oil Pressure"
+            },
+            "occurrenceCount": {
+              "int": 2
+            },
+            "sourceAddress": {
+              "int": 0
+            }
+          }
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": {
+            "string": "visible"
+          }
+        },
+        "raw": null
+      }
+    },
+    "HOSLog": null,
+    "HOSDailyLog": null,
+    "IFTAVehicleMonth": null,
+    "VehicleUtilizationDay": null
+  }
+}

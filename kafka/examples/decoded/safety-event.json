@@ -1,0 +1,72 @@
+{
+  "topic": "terminal.safety-event",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "SafetyEvent",
+    "terminal-provider": "samsara",
+    "terminal-event-time": "2026-11-25T13:45:12Z"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "SafetyEvent",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": null,
+      "Device": null,
+      "Trailer": null,
+      "VehicleLocation": null,
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": {
+        "id": "sft_evt_01KAW9Y2P3Q4R5S6T7V8W9X0C1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "evt-90812",
+        "provider": "samsara",
+        "type": "harsh_brake",
+        "sourceType": "harshBrake",
+        "driver": "drv_01JK8RP0PV6KQQPHWNK395E7MW",
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "startedAt": 1795614312000000,
+        "startLocation": {
+          "longitude": -83.1204,
+          "latitude": 39.9551
+        },
+        "endedAt": 1795614316000000,
+        "endLocation": {
+          "longitude": -83.1189,
+          "latitude": 39.9552
+        },
+        "stats": {
+          "maximumSpeed": 98.2,
+          "averageSpeed": 71.4,
+          "roadSpeedLimit": 104.6,
+          "gForceForwardBackward": -0.48,
+          "gForceSideToSide": 0.04,
+          "heading": 90
+        },
+        "cameraMedia": {
+          "frontFacing": {
+            "available": true,
+            "sourceId": "cam-front-90812"
+          },
+          "rearFacing": null
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": "visible"
+        },
+        "raw": null
+      },
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": null
+    }
+  }
+}

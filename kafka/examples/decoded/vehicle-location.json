@@ -1,0 +1,52 @@
+{
+  "topic": "terminal.vehicle-location",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "VehicleLocation",
+    "terminal-provider": "geotab",
+    "terminal-event-time": "2026-11-25T14:30:00Z"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "VehicleLocation",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": null,
+      "Device": null,
+      "Trailer": null,
+      "VehicleLocation": {
+        "id": "vcl_loc_01KAW9Y2P3Q4R5S6T7V8W9X0A1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b6H26",
+        "provider": "geotab",
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "driver": "drv_01JK8RP0PV6KQQPHWNK395E7MW",
+        "locatedAt": 1795617000000000,
+        "location": {
+          "longitude": -83.0007,
+          "latitude": 39.9612
+        },
+        "address": {
+          "formatted": "I-70 E, Columbus, OH 43215, USA"
+        },
+        "heading": 92.5,
+        "speed": 104.6,
+        "metadata": {
+          "modifiedAt": 1795617005123000
+        },
+        "raw": null
+      },
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": null
+    }
+  }
+}

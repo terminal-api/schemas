@@ -1,0 +1,74 @@
+{
+  "eventType": "INSERT",
+  "model": "Driver",
+  "detail": {
+    "Vehicle": null,
+    "Driver": {
+      "com.withterminal.api.Driver": {
+        "id": "drv_01JK8RP0PV6KQQPHWNK395E7MW",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b2D82",
+        "provider": "geotab",
+        "status": "active",
+        "firstName": {
+          "string": "Jordan"
+        },
+        "middleName": null,
+        "lastName": {
+          "string": "Rivera"
+        },
+        "email": {
+          "string": "j.rivera@example.com"
+        },
+        "phone": {
+          "string": "+15550100123"
+        },
+        "username": {
+          "string": "jrivera"
+        },
+        "license": {
+          "com.withterminal.api.DriverLicense": {
+            "state": {
+              "string": "OH"
+            },
+            "number": {
+              "string": "CDL8841209"
+            }
+          }
+        },
+        "groups": {
+          "array": [
+            "group_01JK8RP0PV6KQQPHWNK395E7MY"
+          ]
+        },
+        "createdAt": {
+          "long": 1738400400000000
+        },
+        "updatedAt": {
+          "long": 1795615200000000
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": {
+            "string": "visible"
+          }
+        },
+        "raw": null
+      }
+    },
+    "Group": null,
+    "Device": null,
+    "Trailer": null,
+    "VehicleLocation": null,
+    "VehicleStatLog": null,
+    "Trip": null,
+    "SafetyEvent": null,
+    "FaultCodeEvent": null,
+    "HOSLog": null,
+    "HOSDailyLog": null,
+    "IFTAVehicleMonth": null,
+    "VehicleUtilizationDay": null
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "eventType": "INSERT",
+  "model": "Trailer",
+  "detail": {
+    "Vehicle": null,
+    "Driver": null,
+    "Group": null,
+    "Device": null,
+    "Trailer": {
+      "com.withterminal.api.Trailer": {
+        "id": "trl_01JK8RP0PV6KQQPHWNK395E7MZ",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b5G15",
+        "provider": "geotab",
+        "status": "active",
+        "name": {
+          "string": "Trailer 53-108"
+        },
+        "vin": {
+          "string": "1GRAA0626EB701234"
+        },
+        "serialNumber": {
+          "string": "TRL-53108"
+        },
+        "make": {
+          "string": "Great Dane"
+        },
+        "model": {
+          "string": "Champion Dry Van"
+        },
+        "year": {
+          "int": 2023
+        },
+        "groups": {
+          "array": [
+            "group_01JK8RP0PV6KQQPHWNK395E7MY"
+          ]
+        },
+        "licensePlate": {
+          "com.withterminal.api.LicensePlate": {
+            "state": {
+              "string": "IN"
+            },
+            "number": {
+              "string": "TR88219"
+            }
+          }
+        },
+        "createdAt": {
+          "long": 1741604400000000
+        },
+        "updatedAt": {
+          "long": 1795608000000000
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": {
+            "string": "visible"
+          }
+        },
+        "raw": null
+      }
+    },
+    "VehicleLocation": null,
+    "VehicleStatLog": null,
+    "Trip": null,
+    "SafetyEvent": null,
+    "FaultCodeEvent": null,
+    "HOSLog": null,
+    "HOSDailyLog": null,
+    "IFTAVehicleMonth": null,
+    "VehicleUtilizationDay": null
+  }
+}

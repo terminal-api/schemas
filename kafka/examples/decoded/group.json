@@ -1,0 +1,47 @@
+{
+  "topic": "terminal.group",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:group_01JK8RP0PV6KQQPHWNK395E7MY",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "Group",
+    "terminal-provider": "geotab"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "Group",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": {
+        "id": "group_01JK8RP0PV6KQQPHWNK395E7MY",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b4F04",
+        "provider": "geotab",
+        "name": "Midwest Regional Fleet",
+        "description": "Heavy-duty linehaul tractors",
+        "parent": null,
+        "createdAt": 1717228800000000,
+        "updatedAt": 1793534400000000,
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": "visible"
+        },
+        "raw": null
+      },
+      "Device": null,
+      "Trailer": null,
+      "VehicleLocation": null,
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": null
+    }
+  }
+}

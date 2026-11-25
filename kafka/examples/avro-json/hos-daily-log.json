@@ -1,0 +1,79 @@
+{
+  "eventType": "INSERT",
+  "model": "HOSDailyLog",
+  "detail": {
+    "Vehicle": null,
+    "Driver": null,
+    "Group": null,
+    "Device": null,
+    "Trailer": null,
+    "VehicleLocation": null,
+    "VehicleStatLog": null,
+    "Trip": null,
+    "SafetyEvent": null,
+    "FaultCodeEvent": null,
+    "HOSLog": null,
+    "HOSDailyLog": {
+      "com.withterminal.api.HOSDailyLog": {
+        "id": "hos_day_01KAW9Y2P3Q4R5S6T7V8W9X0F1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "daily-2026-11-25-b2D82",
+        "provider": "geotab",
+        "driver": "drv_01JK8RP0PV6KQQPHWNK395E7MW",
+        "date": 20782,
+        "distances": {
+          "com.withterminal.api.HOSDailyDistances": {
+            "total": {
+              "double": 540.2
+            },
+            "driving": {
+              "double": 536.8
+            },
+            "personalConveyance": {
+              "double": 0
+            },
+            "yardMove": {
+              "double": 3.4
+            }
+          }
+        },
+        "statusDurations": {
+          "com.withterminal.api.HOSStatusDurations": {
+            "onDuty": {
+              "double": 3600000
+            },
+            "offDuty": {
+              "double": 10800000
+            },
+            "driving": {
+              "double": 28800000
+            },
+            "waiting": {
+              "double": 0
+            },
+            "sleeperBed": {
+              "double": 43200000
+            },
+            "personalConveyance": {
+              "double": 0
+            },
+            "yardMove": {
+              "double": 900000
+            }
+          }
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": {
+            "string": "visible"
+          }
+        },
+        "raw": null
+      }
+    },
+    "IFTAVehicleMonth": null,
+    "VehicleUtilizationDay": null
+  }
+}

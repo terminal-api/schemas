@@ -1,0 +1,60 @@
+{
+  "topic": "terminal.hos-log",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "HOSLog",
+    "terminal-provider": "geotab",
+    "terminal-event-time": "2026-11-25T10:15:00Z"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "HOSLog",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": null,
+      "Device": null,
+      "Trailer": null,
+      "VehicleLocation": null,
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": {
+        "id": "hos_log_01KAW9Y2P3Q4R5S6T7V8W9X0E1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "hos-10029",
+        "provider": "geotab",
+        "status": "driving",
+        "driver": "drv_01JK8RP0PV6KQQPHWNK395E7MW",
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "codrivers": null,
+        "startedAt": 1795601700000000,
+        "endedAt": 1795616100000000,
+        "location": {
+          "longitude": -86.1581,
+          "latitude": 39.7684
+        },
+        "remarks": [
+          {
+            "sourceId": "rmk-551",
+            "submittedAt": 1795601670000000,
+            "notes": "Pre-trip inspection completed"
+          }
+        ],
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": "visible"
+        },
+        "raw": null
+      },
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": null
+    }
+  }
+}

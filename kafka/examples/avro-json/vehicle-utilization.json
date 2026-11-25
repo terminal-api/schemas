@@ -1,0 +1,51 @@
+{
+  "eventType": "INSERT",
+  "model": "VehicleUtilizationDay",
+  "detail": {
+    "Vehicle": null,
+    "Driver": null,
+    "Group": null,
+    "Device": null,
+    "Trailer": null,
+    "VehicleLocation": null,
+    "VehicleStatLog": null,
+    "Trip": null,
+    "SafetyEvent": null,
+    "FaultCodeEvent": null,
+    "HOSLog": null,
+    "HOSDailyLog": null,
+    "IFTAVehicleMonth": null,
+    "VehicleUtilizationDay": {
+      "com.withterminal.api.VehicleUtilizationDay": {
+        "id": "vcl_day_01KAW9Y2P3Q4R5S6T7V8W9X0H1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "provider": "geotab",
+        "vehicle": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "date": 20782,
+        "fuelConsumed": {
+          "double": 184.5
+        },
+        "distance": 540.2,
+        "durations": {
+          "com.withterminal.api.VehicleUtilizationDurations": {
+            "driving": {
+              "double": 28800000
+            },
+            "idling": {
+              "double": 2700000
+            }
+          }
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": {
+            "string": "visible"
+          }
+        },
+        "raw": null
+      }
+    }
+  }
+}

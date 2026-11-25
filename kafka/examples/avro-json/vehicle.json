@@ -1,0 +1,84 @@
+{
+  "eventType": "INSERT",
+  "model": "Vehicle",
+  "detail": {
+    "Vehicle": {
+      "com.withterminal.api.Vehicle": {
+        "id": "vcl_01JK8RP0PV6KQQPHWNK395E7MV",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b1C71",
+        "provider": "geotab",
+        "status": "active",
+        "vin": {
+          "string": "1FUJGLDR5CSBM1234"
+        },
+        "name": {
+          "string": "Truck 4021"
+        },
+        "make": {
+          "string": "Freightliner"
+        },
+        "model": {
+          "string": "Cascadia"
+        },
+        "year": {
+          "int": 2024
+        },
+        "groups": {
+          "array": [
+            "group_01JK8RP0PV6KQQPHWNK395E7MY"
+          ]
+        },
+        "devices": {
+          "array": [
+            "dvc_01JK8RP0PV6KQQPHWNK395E7MX"
+          ]
+        },
+        "licensePlate": {
+          "com.withterminal.api.LicensePlate": {
+            "state": {
+              "string": "OH"
+            },
+            "number": {
+              "string": "PKS4021"
+            }
+          }
+        },
+        "fuelType": {
+          "string": "diesel"
+        },
+        "fuelTankCapacity": {
+          "double": 567.81
+        },
+        "createdAt": {
+          "long": 1736935200000000
+        },
+        "updatedAt": {
+          "long": 1795615200000000
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": {
+            "string": "visible"
+          }
+        },
+        "raw": null
+      }
+    },
+    "Driver": null,
+    "Group": null,
+    "Device": null,
+    "Trailer": null,
+    "VehicleLocation": null,
+    "VehicleStatLog": null,
+    "Trip": null,
+    "SafetyEvent": null,
+    "FaultCodeEvent": null,
+    "HOSLog": null,
+    "HOSDailyLog": null,
+    "IFTAVehicleMonth": null,
+    "VehicleUtilizationDay": null
+  }
+}

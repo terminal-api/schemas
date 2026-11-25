@@ -1,0 +1,60 @@
+{
+  "topic": "terminal.hos-daily-log",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:drv_01JK8RP0PV6KQQPHWNK395E7MW",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "HOSDailyLog",
+    "terminal-provider": "geotab",
+    "terminal-event-time": "2026-11-25T00:00:00Z"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "HOSDailyLog",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": null,
+      "Device": null,
+      "Trailer": null,
+      "VehicleLocation": null,
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": {
+        "id": "hos_day_01KAW9Y2P3Q4R5S6T7V8W9X0F1",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "daily-2026-11-25-b2D82",
+        "provider": "geotab",
+        "driver": "drv_01JK8RP0PV6KQQPHWNK395E7MW",
+        "date": 20782,
+        "distances": {
+          "total": 540.2,
+          "driving": 536.8,
+          "personalConveyance": 0,
+          "yardMove": 3.4
+        },
+        "statusDurations": {
+          "onDuty": 3600000,
+          "offDuty": 10800000,
+          "driving": 28800000,
+          "waiting": 0,
+          "sleeperBed": 43200000,
+          "personalConveyance": 0,
+          "yardMove": 900000
+        },
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": "visible"
+        },
+        "raw": null
+      },
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": null
+    }
+  }
+}

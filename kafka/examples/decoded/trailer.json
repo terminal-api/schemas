@@ -1,0 +1,58 @@
+{
+  "topic": "terminal.trailer",
+  "key": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY:trl_01JK8RP0PV6KQQPHWNK395E7MZ",
+  "headers": {
+    "terminal-application-id": "app_01HV6VX3MWSC4F4X5D9VZ3MYFV",
+    "terminal-connection-id": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+    "terminal-model": "Trailer",
+    "terminal-provider": "geotab"
+  },
+  "value": {
+    "eventType": "INSERT",
+    "model": "Trailer",
+    "detail": {
+      "Vehicle": null,
+      "Driver": null,
+      "Group": null,
+      "Device": null,
+      "Trailer": {
+        "id": "trl_01JK8RP0PV6KQQPHWNK395E7MZ",
+        "connectionId": "conn_01J9YG9ABQYC7QTA0XPQ2MRBRY",
+        "sourceId": "b5G15",
+        "provider": "geotab",
+        "status": "active",
+        "name": "Trailer 53-108",
+        "vin": "1GRAA0626EB701234",
+        "serialNumber": "TRL-53108",
+        "make": "Great Dane",
+        "model": "Champion Dry Van",
+        "year": 2023,
+        "groups": [
+          "group_01JK8RP0PV6KQQPHWNK395E7MY"
+        ],
+        "licensePlate": {
+          "state": "IN",
+          "number": "TR88219"
+        },
+        "createdAt": 1741604400000000,
+        "updatedAt": 1795608000000000,
+        "metadata": {
+          "addedAt": 1795617005000000,
+          "modifiedAt": 1795617005123000,
+          "deletedAt": null,
+          "visibility": "visible"
+        },
+        "raw": null
+      },
+      "VehicleLocation": null,
+      "VehicleStatLog": null,
+      "Trip": null,
+      "SafetyEvent": null,
+      "FaultCodeEvent": null,
+      "HOSLog": null,
+      "HOSDailyLog": null,
+      "IFTAVehicleMonth": null,
+      "VehicleUtilizationDay": null
+    }
+  }
+}
